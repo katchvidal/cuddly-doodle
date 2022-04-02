@@ -21,3 +21,37 @@
     
     -   Console Resp: Warning: Failed prop type: Invalid prop `props` of type `number` supplied to `PrimeraApp`, expected `string`.
         PrimeraApp@http://localhost:3000/static/js/bundle.js:32:7
+
+
+##  Hooks
+    -   UseState
+        const [Counter, setCounter] = useState(initialValue);   
+        -   Counter -> Valor renderizado
+        -   SetCounter -> Acciones 
+        -   InitialValue -> Valor Inicial
+
+
+##  Aplicando Tests
+    -   Generar Patron de diseño para prubeas ordenadas y limpias
+    -   Carpeta Source -> Tests
+
+        describe('Prubeas Iniciales en Jest con React', () => {
+
+            test('SameStrings', () => {
+            
+                //  1.  Initialized Test
+                const mensaje = 'Hola Mundo'
+            
+                //  2.  Estimulo
+                const message = `Hola Mundo`
+            
+                const messageIncorrect = 'Hola Mundo 2'
+            
+                //  3.  Observar el Comportanemiento
+                expect( mensaje ).not.toBe(messageIncorrect)
+                
+                expect( mensaje ).toBe(message)
+            
+            })
+
+        })
